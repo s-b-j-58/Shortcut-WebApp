@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+     <script src="Home.js"></script>
+       <link rel="stylesheet" href="Home.css">
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6597/6597982.png ">
+     <script src="https://kit.fontawesome.com/26d4a64054.js" crossorigin="anonymous"></script>
+     </head>
+<body>
+   <div class="header">
+
+    <div class="searchbar">
+      <i onclick="searching()" class="fas fa-search"></i>
+      <form>
+         <input id="insearch" type="search" name="searcher" placeholder="Recherche ...">
+         <input onclick="searching()" type="submit" name="submit" hidden>
+      </form>
+    </div>
+
+   </div>
+
+   <div class="add_shrt hide" id="add_shrt">
+      <div class="canceler" onclick="pop()"></div>
+      <form class="shrt_form" id="shortcutForm">
+         <button onclick="pop()" type="button" class="popout_btn"><img src="https://cdn-icons-png.flaticon.com/512/657/657059.png" style="width: 18px;"></img></button>
+         <h2 class="shrt_formhead">Create Shortcut</h2>
+         <input type="number" placeholder="Order" class="shrt_num" id="numInput" required>
+         <input type="text" placeholder="Name" class="shrt_name" id="nameInput" required>
+         <input type="text" placeholder="URL" class="shrt_url" id="urlInput" required>
+         <input type="text" placeholder="Icon URL" class="shrt_ico_url" id="iconUrlInput">
+         <button type="submit">Create</button>
+      </form>
+   </div>
+
+   <div class="content">
+      <div class="cardCreator"><button title="Add New" onclick="pop()" class="new_card"><i class="fas fa-plus"></i></button></div>
+      <div class="CardsContainer">
+      </div>
+   </div>
+</body>
+</html>
